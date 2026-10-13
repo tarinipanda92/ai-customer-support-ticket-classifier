@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Customer Support Classifier</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <main class="container">
+        <header class="header">
+            <p class="eyebrow">MACHINE LEARNING PROJECT</p>
+            <h1>AI Customer Support Classifier</h1>
+            <p class="subtitle">
+                Classify customer messages and estimate their priority
+                using machine learning.
+            </p>
+        </header>
+
+        <section class="panel">
+            <h2>Analyze a support ticket</h2>
+
+            <form method="POST">
+                <label for="ticket">Customer message</label>
+
+                <textarea
+                    id="ticket"
+                    name="ticket"
+                    rows="5"
+                    maxlength="2000"
+                    placeholder="Example: I was charged twice for my subscription..."
+                    required>{{ ticket }}</textarea>
+
+                <button type="submit">Classify Ticket</button>
+            </form>
+
+            {% if error %}
+                <p class="error">{{ error }}</p>
+            {% endif %}
+        </section>
+
+        {% if category and priority %}
+        <section class="panel results">
+            <h2>Prediction Results</h2>
+
+            <div class="result-item">
+                <span>Predicted Category</span>
+                <strong>{{ category }}</strong>
+            </div>
+
+            <div class="result-item">
+                <span>Estimated Priority</span>
+                <strong class="priority {{ priority|lower }}">
+                    {{ priority }}
+                </strong>
+            </div>
+
+            <p class="disclaimer">
+                These are model predictions based on a small
+                educational dataset. Review tickets manually before
+                making real customer-support decisions.
+            </p>
+        </section>
+        {% endif %}
+
+        <footer>
+            Built with Python, Flask, Pandas and Scikit-learn
+        </footer>
+    </main>
+</body>
+</html>

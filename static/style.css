@@ -1,0 +1,141 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #172033;
+}
+
+.container {
+    width: min(760px, 92%);
+    margin: 45px auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.eyebrow {
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-size: clamp(27px, 5vw, 38px);
+    margin: 10px 0;
+}
+
+.subtitle {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.panel {
+    background: white;
+    padding: 26px;
+    margin-bottom: 20px;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(15, 23, 42, 0.06);
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font: inherit;
+    resize: vertical;
+    min-height: 125px;
+}
+
+textarea:focus {
+    outline: 2px solid #93c5fd;
+    border-color: #2563eb;
+}
+
+button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 16px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.result-item span {
+    color: #64748b;
+}
+
+.priority {
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+.priority.high {
+    color: #b91c1c;
+    background: #fee2e2;
+}
+
+.priority.medium {
+    color: #92400e;
+    background: #fef3c7;
+}
+
+.priority.low {
+    color: #166534;
+    background: #dcfce7;
+}
+
+.error {
+    color: #b91c1c;
+    margin-bottom: 0;
+}
+
+.disclaimer {
+    margin-top: 20px;
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+footer {
+    text-align: center;
+    color: #64748b;
+    font-size: 13px;
+    padding: 10px;
+}
